@@ -13,7 +13,9 @@ The C++ program named "numericConverter.cpp" is a versatile utility for performi
 - The program lacks a function for converting octal to hexadecimal (option 18), as indicated in the comment within the code.
 - The formatting of the code appears to be well-structured, utilizing functions for modularization and a switch statement for menu selection.
 - There's an option for converting characters to ASCII (option 19).
-- The program ensures continuous execution with a perpetual while loop until the user decides to exit.*/
+- The program ensures continuous execution with a perpetual while loop until the user decides to exit.
+*/
+
 
 #include <iostream>
 #include <string>
