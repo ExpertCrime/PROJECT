@@ -1,0 +1,35 @@
+LINUX COMMAND
+
+The LINUX COMMAND you provided is a list of some of the most common and useful Linux commands. It is a good idea to familiarize yourself with these commands, as they will be essential for navigating the Linux filesystem and performing basic tasks.
+
+rm (1)               - remove files or directories
+mkdir (1)            - make directories
+ls (1)               - list directory contents
+pwd (1)              - print name of current/working directory
+history (3readline)  - GNU History Library
+whoami (1)           - print effective userid
+whatis (1)           - display one-line manual page descriptions
+cp (1)               - copy files and directories
+rmdir (1)            - remove empty directories
+touch (1)            - change file timestamps
+less (1)             - opposite of more
+mv (1)               - move (rename) files
+man (7)              - macros to format man pages
+man (1)              - an interface to the system reference manuals
+clear (1)            - clear the terminal screen
+FILE (3)             - overview of system data types
+file (1)             - determine file type
+less (1)             - opposite of more
+echo (1)             - display a line of text
+cut (1)              - remove sections from each line of files
+sort (1)             - sort lines of text files
+head (1)             - output the first part of files
+wc (1)               - print newline, word, and byte counts for each file
+join (1)             - join lines of two files on a common field
+split (1)            - split a file into pieces
+expand (1)           - convert tabs to spaces
+cat (1)              - concatenate files and print on the standard output
+nano (1)             - Nano's ANOther editor, inspired by Pico
+vim (1)              - Vi IMproved, a programmer's text editor
+cd(1)		     - change directory
+wc(1) 	  	     - word count
