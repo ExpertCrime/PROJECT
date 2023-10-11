@@ -1,3 +1,20 @@
+/*
+Description:
+The C++ program named "numericConverter.cpp" is a versatile utility for performing various numeric conversions and operations. It includes functions to convert between decimal, binary, hexadecimal, and octal representations. Additionally, the program provides arithmetic operations such as addition, subtraction, multiplication, and division on binary numbers. It also features conversions like ASCII to decimal, decimal to BCD (Binary Coded Decimal), and more. The program runs in an interactive loop, allowing the user to choose from a menu of conversion and operation options repeatedly until choosing to exit.
+
+**Brief:**
+- The program includes functions for converting between decimal, binary, hexadecimal, and octal representations.
+- Arithmetic operations such as addition, subtraction, multiplication, and division are available for binary numbers.
+- The user interacts with the program through a menu, selecting options from 1 to 20.
+- Conversion functions handle various numeric formats, including BCD (Binary Coded Decimal).
+- The program runs indefinitely until the user chooses to exit (option 20).
+
+**Note:** 
+- The program lacks a function for converting octal to hexadecimal (option 18), as indicated in the comment within the code.
+- The formatting of the code appears to be well-structured, utilizing functions for modularization and a switch statement for menu selection.
+- There's an option for converting characters to ASCII (option 19).
+- The program ensures continuous execution with a perpetual while loop until the user decides to exit.*/
+
 #include <iostream>
 #include <string>
 #include <bitset>
