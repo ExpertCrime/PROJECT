@@ -7,21 +7,11 @@ int main()
     string input;
     while (true)
     {
-        cout << "Type 'cls', 'cls', 'clear' to exit " << endl;
+        cout << "Type 'cls', 'exit', 'clear' to exit " << endl;
         cout << "Enter an integer : ";
         cin >> input;
 
-        if (input == "exit")
-        {
-            cout << "Exiting the program." << endl;
-            break;
-        }
-        else if (input == "cls")
-        {
-            cout << "Exiting the program." << endl;
-            break;
-        }
-        if (input == "clear")
+        if (input == "exit" || input == "cls" || input == "clear")
         {
             cout << "Exiting the program." << endl;
             break;
