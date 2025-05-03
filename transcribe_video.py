@@ -107,12 +107,12 @@ def main():
             install_dependency(install_cmd, name)
     
     # Step 3: Input paths
-    video_path = input("\nEnter full path to input video file: ").strip('"')
+    video_path = input("\nEnter full path to input video or audio file: ").strip('"')
     while not os.path.isfile(video_path):
-        print("Invalid video path. Please try again.")
-        video_path = input("Enter full path to input video file: ").strip('"')
+        print("Invalid video or audio path. Please try again.")
+        video_path = input("Enter full path to input video or audio file: ").strip('"')
 
-    output_dir = input("Enter full path to output directory: ").strip('"')
+    output_dir = input("Enter a path or folder name to save; a folder will be created if needed: ").strip('"')
     if not os.path.isdir(output_dir):
         os.makedirs(output_dir, exist_ok=True)
 
@@ -127,7 +127,11 @@ def main():
     print("2 - English")
     print("3 - Other")
     lang_choice = input("Enter your choice (1/2/3): ").strip()
-    
+
+    while lang_choice not in ['1', '2', '3']:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+        lang_choice = input("Enter your choice (1/2/3): ").strip()
+
     language = 'Hindi'  # default
     if lang_choice == '2':
         language = 'English'
@@ -140,7 +144,11 @@ def main():
     print("2 - medium (More accurate)")
     print("3 - large (Most accurate but slower)")
     model_choice = input("Enter your choice (1/2/3): ").strip()
-    
+
+    while model_choice not in ['1', '2', '3']:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+        model_choice = input("Enter your choice (1/2/3): ").strip()
+
     model = 'small'  # default
     if model_choice == '2':
         model = 'medium'
@@ -157,12 +165,19 @@ def main():
         sys.exit(1)
 
     # Step 8: Subtitle Encoding
-    print("Choose subtitle encoding option:")
-    print("1 - Soft Subtitle (separate subtitle track)")
-    print("2 - Hard Subtitle (burn subtitles into video)")
-    choice = input("Enter your choice (1/2): ").strip()
+    if video_path.lower().endswith(('.mp4', '.mkv', '.avi', '.mov')):  # Check if input is a video file
+        print("Choose subtitle encoding option:")
+        print("1 - Soft Subtitle (separate subtitle track)")
+        print("2 - Hard Subtitle (burn subtitles into video)")
+        choice = input("Enter your choice (1/2): ").strip()
 
-    encode_subtitles(video_path, output_srt_path, output_dir, choice)
+        while choice not in ['1', '2']:
+            print("Invalid choice. Please enter 1 or 2.")
+            choice = input("Enter your choice (1/2): ").strip()
+
+        encode_subtitles(video_path, output_srt_path, output_dir, choice)
+    else:
+        print("\nInput file is an audio file. Subtitle encoding is not applicable.\n")
 
     # Step 9: Summary
     print("="*50)
